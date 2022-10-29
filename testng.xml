@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Project configuration xml file -->
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Project_Name" parallel="tests" thread-count="1" verbose="1">
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+		<listener class-name="utils.ResultListener" />
+		<!-- <listener class-name="utils.AnnotationTransformer"/> -->
+	</listeners>
+	<test name="Run on chrome">
+		<parameter name="browser" value="chrome"></parameter>
+		<packages>
+			<package name="main" />
+			<package name="test" />
+		</packages>
+
+
+	</test>
+</suite> 
